@@ -5,7 +5,7 @@ pipeline {
             agent {
                     dockerfile  {
                         filename 'Dockerfile'
-                        dir 'build'
+                        dir 'public'
                     }
                 }
             steps {
