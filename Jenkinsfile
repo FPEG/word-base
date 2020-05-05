@@ -3,11 +3,13 @@ pipeline {
     stages {
         stage('build') {
             agent {
-                    docker {
-                        image 'node:alpine'
+                    dockerfile  {
+                        filename 'Dockerfile'
+                        dir 'build'
                     }
                 }
             steps {
+                sh 'yarn --version'
                 sh 'npm install'
 				sh 'npm run-script build'
                 sh 'rm -rf /opt/nginx/www/WordBase/static'
