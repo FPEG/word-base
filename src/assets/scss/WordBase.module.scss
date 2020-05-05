@@ -1,0 +1,15 @@
+$debug: true;
+.debugBox{
+    @if $debug {  border: 1px solid black; }
+}
+
+
+
+
+
+.exampleInput {
+    @extend .debugBox;
+    // width: 200px;
+    // margin: 0 8px 8px 0;
+    // float: left;
+  }

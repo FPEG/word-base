@@ -1,0 +1,24 @@
+$backgroundColor: #e6e6e6;
+
+.login{
+    padding: 30px;
+    max-width: 480px;
+    margin-top: 10px;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+}
+.banner{
+    // min-height: 200px;
+    height: 26vh;
+}
+.footer{
+    // min-height: 200px;
+    height: 40vh;
+}
+
+.background{
+    background-color: $backgroundColor;
+}

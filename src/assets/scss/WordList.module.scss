@@ -1,0 +1,20 @@
+.wordList{
+    // float: left;
+    // width: 25%;
+    background-color: white;
+    
+    .listItem
+    {
+        border-left:10px solid #1890ff;
+        button{
+            float: right;
+            opacity: 25%;
+            border:none;
+        }
+        &:hover{
+            background-color:#f0f2f5;
+            border-left:10px solid #eeeeee!important;
+            cursor: pointer;
+        }
+    }
+}
