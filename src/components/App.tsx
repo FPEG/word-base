@@ -59,7 +59,7 @@ const App: React.SFC = () => {
               </Switch>
 
             </Content>
-            <Footer style={{ textAlign: 'center' }}>WordBase WARNING WordBase</Footer>
+            <Footer style={{ textAlign: 'center' }}>WordBase WARNING WordBase Gensokyo WordBase</Footer>
           </Layout>
         </Layout>
       </BrowserRouter>
