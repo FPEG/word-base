@@ -6,12 +6,13 @@ pipeline {
                     dockerfile  {
                         filename 'Dockerfile'
                         dir 'public'
+                        label 'my-defined-label'
                     }
                 }
             steps {
                 sh 'yarn --version'
-                sh 'npm install'
-				sh 'npm run-script build'
+                sh 'yarn install'
+				sh 'yarn build'
                 sh 'rm -rf /opt/nginx/www/WordBase/static'
                 sh 'rm -rf /opt/nginx/www/WordBase/index.html'
                 sh 'cp -r build/static /opt/nginx/www/WordBase/static'
