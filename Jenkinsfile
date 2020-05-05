@@ -9,7 +9,6 @@ pipeline {
                     }
                 }
             steps {
-                sh 'yarn --version'
                 sh 'yarn install'
 				sh 'yarn build'
                 sh 'rm -rf /opt/nginx/www/WordBase/static'
