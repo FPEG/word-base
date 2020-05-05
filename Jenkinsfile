@@ -6,7 +6,6 @@ pipeline {
                     dockerfile  {
                         filename 'Dockerfile'
                         dir 'public'
-                        label 'my-defined-label'
                     }
                 }
             steps {
