@@ -8,7 +8,7 @@ pipeline {
                         dir 'public'
                         args """
 -e MYPROXY_HOST="${env.MYPROXY_HOST}"
--e MYPROXY_PORT="${env.MYPROXY_PORT}"
+-e MYPROXY_PORT="${env.MYPROXY_PORT}" -m 512M
 """
                     }
                 }
@@ -20,7 +20,7 @@ pipeline {
                     }
                 }
                 sh 'yarn install'
-				sh 'yarn build --max-old-space-size=512'
+				sh 'yarn build'
                 sh 'rm -rf /opt/nginx/www/WordBase/static'
                 sh 'rm -rf /opt/nginx/www/WordBase/index.html'
                 sh 'cp -r build/static /opt/nginx/www/WordBase/static'
