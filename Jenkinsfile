@@ -15,7 +15,6 @@ pipeline {
             steps {
                 script{
                     if(env.MYPROXY_HOST != null){
-                        echo env.MYPROXY_PORT
                         sh "yarn config set proxy http://${env.MYPROXY_HOST}:${env.MYPROXY_PORT}"
                         sh "yarn config set https-proxy http://${env.MYPROXY_HOST}:${env.MYPROXY_PORT}"
                     }
