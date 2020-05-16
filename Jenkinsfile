@@ -9,6 +9,12 @@ pipeline {
                     }
                 }
             steps {
+                script{
+                    if(env.MYPROXY_HOST != null){
+                        sh 'yarn config set proxy http://${env.MYPROXY_HOST}:${env.MYPROXY_PORT}'
+                        sh 'yarn config set https-proxy http://${env.MYPROXY_HOST}:${env.MYPROXY_PORT}' 
+                    }
+                }
                 sh 'yarn install'
 				sh 'yarn build'
                 sh 'rm -rf /opt/nginx/www/WordBase/static'

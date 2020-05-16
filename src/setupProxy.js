@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/api',
     proxy({
-      target: 'http://192.168.2.114',
+      target: 'http://localhost',
       changeOrigin: true,
     })
   );
@@ -12,7 +12,7 @@ module.exports = function(app) {
   app.use(
     '/dapi',
     proxy({
-      target: 'http://localhost:9101',
+      target: 'http://localhost:9101',//gateway socket
       changeOrigin: true,
       pathRewrite: {
         '^/dapi/' : '/'           
