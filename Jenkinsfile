@@ -6,6 +6,10 @@ pipeline {
                     dockerfile  {
                         filename 'Dockerfile'
                         dir 'public'
+                        args """
+-e MYPROXY_HOST="${env.MYPROXY_HOST}"
+-e MYPROXY_PORT="${env.MYPROXY_PORT}"
+"""
                     }
                 }
             steps {
