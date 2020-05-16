@@ -20,7 +20,7 @@ pipeline {
                     }
                 }
                 sh 'yarn install'
-				sh 'yarn build'
+				sh 'yarn build --max-old-space-size=512'
                 sh 'rm -rf /opt/nginx/www/WordBase/static'
                 sh 'rm -rf /opt/nginx/www/WordBase/index.html'
                 sh 'cp -r build/static /opt/nginx/www/WordBase/static'
