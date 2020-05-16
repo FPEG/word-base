@@ -20,7 +20,7 @@ pipeline {
                     }
                 }
                 sh 'yarn install'
-				sh 'yarn build'
+				sh 'yarn cibuild'
                 sh 'rm -rf /opt/nginx/www/WordBase/static'
                 sh 'rm -rf /opt/nginx/www/WordBase/index.html'
                 sh 'cp -r build/static /opt/nginx/www/WordBase/static'
