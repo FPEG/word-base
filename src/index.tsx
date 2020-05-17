@@ -40,16 +40,16 @@ else if (process.env.NODE_ENV === 'production') {
 
 
 if (localStorage["token"] === undefined) {
-  if (process.env.NODE_ENV === 'production') {
-    // window.location.href = 'http://localhost:3001/login';
-    window.location.href = 'http://baidu.com';
-  }
-  if (process.env.NODE_ENV === 'development') {
-    window.location.href = 'http://baidu.com';
-  }
-  if (process.env.NODE_ENV === 'test') {
+  if (process.env.REACT_APP_ENVIRONMENT === 'test') {
     window.history.pushState({},"","/login")
   }
+  // if (process.env.NODE_ENV === 'production') {
+  //   // window.location.href = 'http://localhost:3001/login';
+  //   window.location.href = 'http://baidu.com';
+  // }
+  // if (process.env.NODE_ENV === 'development') {
+  //   window.location.href = 'http://baidu.com';
+  // }
 }
 else {
   ReactDOM.render(

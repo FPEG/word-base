@@ -44,7 +44,7 @@
     "start": "react-scripts start",
     "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build&&deploy.cmd",
     "cibuild": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
-    "cibuildtest": "cross-env NODE_ENV=test react-scripts build",
+    "cibuildtest": "cross-env REACT_APP_ENVIRONMENT=test react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
