@@ -41,13 +41,14 @@ else if (process.env.NODE_ENV === 'production') {
 
 if (localStorage["token"] === undefined) {
   if (process.env.NODE_ENV === 'production') {
-    console.log("!!!!!");
     // window.location.href = 'http://localhost:3001/login';
     window.location.href = 'http://baidu.com';
   }
   if (process.env.NODE_ENV === 'development') {
-    console.log("!!!!!");
     window.location.href = 'http://baidu.com';
+  }
+  if (process.env.NODE_ENV === 'test') {
+    window.history.pushState({},"","/login")
   }
 }
 else {
