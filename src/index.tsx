@@ -42,6 +42,7 @@ else if (process.env.NODE_ENV === 'production') {
 if (localStorage["token"] === undefined) {
   if (process.env.REACT_APP_ENVIRONMENT === 'test') {
     window.history.pushState({},"","/login")
+    window.history.go(0)
   }
   // if (process.env.NODE_ENV === 'production') {
   //   // window.location.href = 'http://localhost:3001/login';
